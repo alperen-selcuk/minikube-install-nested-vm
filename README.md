@@ -1,6 +1,6 @@
 # minikube-install
 
->>> CLOUD SHELL <<<
+>>> CLOUD SHELL 
 
 google cloud üzerinde minikube kurabilmek için belirli bir cpu kullanmamız gerek. sanallaştırma desteklemesi gerekiyor.  Intel Haswell cpu çalıştırılan region bulmamız gerekiyor. bilgiye buradan ulaşabilirsiniz. https://cloud.google.com/compute/docs/cpu-platforms
 
@@ -12,7 +12,7 @@ gcloud compute instances create nested-instance   --enable-nested-virtualization
 
 
 
->>> INSTANCE <<<
+>>> INSTANCE 
 
 ## docker install
 
