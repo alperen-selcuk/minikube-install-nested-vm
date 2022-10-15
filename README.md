@@ -11,15 +11,20 @@ gcloud compute instances create nested-instance   --enable-nested-virtualization
 ```
 
 
-
 >>> INSTANCE 
 
-## docker install
+sunucuya girdiğimizde nested desteklediğini komut çalıştırarak görebiliriz.  egrep -q 'vmx|svm' /proc/cpuinfo && echo yes || echo no
 
-öncelikle docker kuracağız.
+daha sonra minikube çalıştırabilmek için virtualbox veya kvm kurmamız gerekiyor. ben kvm kuracağım. öncelikle req paketleri kuralım.
 
 ```
-curl https://raw.githubusercontent.com/alperen-selcuk/docker-install/main/install-docker.sh | bash -
+apt-get install curl wget apt-transport-https -y
+```
+
+daha sonra virtualbox
+
+```
+apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
 ```
 
 ## minikube install
@@ -36,7 +41,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 driver docker seçip minikube start diyoruz.
 
 ```
-minikube start --container-runtime=containerd --nodes=3 --cni=calico --driver=docker --force
+minikube start --container-runtime=containerd --nodes=2 --cni=calico --force
 ```
 
 ## kubectl
