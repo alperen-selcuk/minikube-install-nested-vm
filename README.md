@@ -53,3 +53,4 @@ curl https://raw.githubusercontent.com/alperen-selcuk/kubectl-install/main/insta
 ```
 
 
+
